@@ -127,22 +127,16 @@ body {
 #cake {
     display: block;
     position: relative;
-    margin: -16em auto -8em auto;
-}
-
-.cake_and_velas {
-    position: absolute;
-    bottom: 25%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-}
-
-#cake {
-    display: block;
-    position: relative;
     margin: -10em auto 0 auto;
 }
+
+/*.cake_and_velas {*/
+/*    position: absolute;*/
+/*    bottom: -40%;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    overflow: hidden;*/
+/*}*/
 
 .velas {
     background: #ffffff;
@@ -266,5 +260,64 @@ body {
     to {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+
+    .cake_and_velas {
+        position: absolute;
+        bottom: -40%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .cake_and_velas {
+        position: absolute;
+        bottom: -40%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cake_and_velas {
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .cake_and_velas {
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .cake_and_velas {
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
     }
 }
