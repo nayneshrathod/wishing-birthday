@@ -268,7 +268,7 @@ body {
 
     .cake_and_velas {
         position: absolute;
-        bottom: -40%;
+        bottom: -2%;
         left: 0;
         right: 0;
         overflow: hidden;
@@ -280,7 +280,7 @@ body {
 
     .cake_and_velas {
         position: absolute;
-        bottom: -40%;
+        bottom:  -5%;
         left: 0;
         right: 0;
         overflow: hidden;
@@ -313,7 +313,7 @@ body {
 
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
-  .cake_and_velas {
+    .cake_and_velas {
         position: absolute;
         bottom: 25%;
         left: 0;
