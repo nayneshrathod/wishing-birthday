@@ -37,10 +37,12 @@
         whatever you wish may it be <br> fulfilled on your birthday and always”
     </p>
     <p class="xy" style="color: white; font-size: 4rem; margin-bottom: 0em; margin-top: 0em; font-family: 'Lobster';">
-        Happy Birthday, Shyam Bhau <!--Replace Michael with the name of birthaywishee!-->
+        Happy Birthday, {{to}}<!--Replace Michael with the name of birthaywishee!-->
+{#        Happy Birthday, Shyam Bhau <!--Replace Michael with the name of birthaywishee!-->#}
     </p>
     <h2 class="xyz" style="color: white; margin-top: 0.75em;">
-        - Naynesh Rathod   <!--Replace Sujal Goel with your name!-->
+         - {{ from }}
+{#        - Naynesh Rathod   <!--Replace Sujal Goel with your name!-->#}
     </h2>
 
 
@@ -103,7 +105,7 @@
     <br>
     <br>
     <br>
-    <!-- <button class="bubbly-button" onclick="playAudio(); confetti.start()" ondblclick="confetti.stop(); stopAudio()" style="margin-top: 7rem; margin-bottom: 2.75rem;"><b>Click Me!<b></button> -->
+
     <script src="{% static 'js/script.js' %}"></script>
     <br>
 
@@ -123,8 +125,16 @@
         Tap to Cake<br><br>
         Coded with <span class="heart">❤</span> by
         <a href="https://www.linkedin.com/in/nayneshrathod" target="www.google.com"
-                style="color: white; text-decoration: none; margin-top: 0em; margin-bottom: 0em;">Naynesh Rathod
+           style="color: white; text-decoration: none; margin-top: 0em; margin-bottom: 0em;">Naynesh Rathod
         </a></p>
+     <form  method="post">
+         {% csrf_token %}
+        <input type="text" class="form-control" name="toname" id="toname"> <br>
+        <input type="text" class="form-control" name="fromname" id="fromname"> <br>
+        <input type="submit" value="submit" class="bubbly-button"> <br>
+
+{#    <button class="bubbly-button" onclick="playAudio(); confetti.start()" ondblclick="confetti.stop(); stopAudio()" style="margin-top: 7rem; margin-bottom: 2.75rem;"><b>Click Me!<b></button>#}
+        </form>
 </center>
 
 </body>
