@@ -98,14 +98,14 @@ def index_slug(request, slug):
         return render(request, 'index.html', {"data": wid})
     else:
         if not slug:
-            wid = wish.objects.get(slug="jjjjjjj-shshhshsh-nsbabs-sanbanbsjd-djsd")
+            wid = wish.objects.get(slug="birthday-person-name-your-name")
             return render(request, 'index.html', {"data": wid})
         else:
             wid = wish.objects.get(slug=slug)
             return render(request, 'index.html', {"data": wid})
 
     if not id:
-        wid = wish.objects.get(slug="jjjjjjj-shshhshsh-nsbabs-sanbanbsjd-djsd")
+        wid = wish.objects.get(slug="birthday-person-name-your-name")
         return render(request, 'index.html', {"data": wid})
     else:
         wid = wish.objects.get(slug=slug)

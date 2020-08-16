@@ -23,7 +23,7 @@ class wish(models.Model):
             self.slug = slugify(s, )
 
         if not self.wishurl:
-            self.wishurl = "http://127.0.0.1:8000/%s" % self.slug
+            self.wishurl = "https://wishing-birthday.herokuapp.com/%s" % self.slug
             # self.wishurl
 
         return super().save(*args, **kwargs)
