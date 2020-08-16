@@ -19,5 +19,7 @@ from django.urls import path
 from bday import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name='home'),
+    path('<int:id>/', views.index_id, name='viaid'),
+    # path('<slug>/', views.index_slug, name='viaslug'),
 ]

@@ -18,6 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta class="theme-color" name="theme-color" content="">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
     <!-- <audio id="myAudio"  >  <source src="https://soc-hb1.vercel.app/bday.mp3" type="audio/mpeg"> -->
     <!-- <source src="bday.mp3" type="audio/mpeg"> -->
@@ -34,18 +36,24 @@
     </audio>
     <br>
     <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
-    <p style="color: white; font-size: 1.5rem;   margin-bottom: 1em; margin-top: 0em; font-family: cursive;">
-        <!-- “I wish your birthday is the happiest...” -->
-        <!-- <br> -->
-        “A wish for you on your birthday,<br> whatever you ask may you receive,<br> whatever you seek may you find,<br>
-        whatever you wish may it be <br> fulfilled on your birthday and always”
+
+    <!-- “I wish your birthday is the happiest...” -->
+    <!-- <br> -->
+
+    <p id="code"
+       style="color: white; font-size: 1.5rem;  height: 110px;min-height: 110px;max-height: 110px; margin-bottom: 1em; margin-top: 0em; font-family: cursive;">
+        “A wish for you on your birthday,<br>
+        whatever you ask may you receive,<br>
+        whatever you seek may you find,<br>
+        whatever you wish may it be <br>
+        fulfilled on your birthday and always”
     </p>
     <p class="xy" style="color: white; font-size: 4rem; margin-bottom: 0em; margin-top: 0em; font-family: 'Lobster';">
-        Happy Birthday, {{to}}<!--Replace Michael with the name of birthaywishee!-->
+        Happy Birthday, {{data.toname}}<!--Replace Michael with the name of birthaywishee!-->
         {#        Happy Birthday, Shyam Bhau <!--Replace Michael with the name of birthaywishee!-->#}
     </p>
     <h2 class="xyz" style="color: white; margin-top: 0.75em;">
-        - {{ from }}
+        - {{ data.fromname }}
         {#        - Naynesh Rathod   <!--Replace Sujal Goel with your name!-->#}
     </h2>
 
@@ -122,6 +130,34 @@
         function stopAudio() {
             x.pause();
         }
+
+
+        {#adjustCodePosition();#}
+
+
+        (function ($) {
+            $.fn.typewriter = function () {
+                this.each(function () {
+                    var $ele = $(this), str = $ele.html(), progress = 0;
+                    $ele.html('');
+                    var timer = setInterval(function () {
+                        var current = str.substr(progress, 1);
+                        if (current == '<') {
+                            progress = str.indexOf('>', progress) + 3;
+                        } else {
+                            progress++;
+                        }
+                        $ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+                        if (progress >= str.length) {
+                            clearInterval(timer);
+                        }
+                    }, 35);
+                });
+                return this;
+            };
+        })(jQuery);
+
+        $("#code").typewriter();
     </script>
 
     <p style="color: white; margin-top: 4em; margin-bottom: 2em;">
@@ -158,9 +194,14 @@
             </tr>
             <tr>
 
-                <td colspan="2" align="center">
+                <td>
                     <input type="submit" value="submit" class="bubbly-button"> <br>
 
+                </td>
+                <td>
+                    <button name="share" value="Share" class="bubbly-button">
+                        <a href="{% url 'viaid'  id=data.id %}">Share</a>
+                    </button>
                 </td>
             </tr>
         </table>

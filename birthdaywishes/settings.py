@@ -74,10 +74,22 @@ WSGI_APPLICATION = 'birthdaywishes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dckvu0m9vudtts',
+        'USER': 'uiwvpdfrbevrxs',
+        'PASSWORD': '978f8002f3d9130b6402e2317c0ee047fb3ba7eebfe48084c930f17497cfb19c',
+        'HOST': 'ec2-54-146-91-153.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
