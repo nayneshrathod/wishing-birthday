@@ -213,7 +213,7 @@
                     {#                <td colspan="2" align="center">#}
                     <!-- Sharingbutton Facebook -->
                     <a class="resp-sharing-button__link"
-                       href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwishing-birthday.herokuapp.com%2F{{ data.slug }}"
+                       href="https://facebook.com/sharer/sharer.php?u=Dear {{ data.toname }}, {{ data.fromname }} send to you a Birthday wishesh. Check this Url"
                        target="_blank" rel="noopener" aria-label="Facebook">
                         <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--medium">
                             <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -228,7 +228,7 @@
                     <!-- Sharingbutton E-Mail -->
                     <a class="resp-sharing-button__link"
                        href="mailto:?subject={{ data.wishurl }}&amp;
-                       body=https%3A%2F%2Fwishing-birthday.herokuapp.com%2F{{ data.slug }}"
+                       body=Dear {{ data.toname }}, {{ data.fromname }} send to you a Birthday wishesh. Check this Url "
                        target="_self" rel="noopener" aria-label="E-Mail">
                         <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--medium">
                             <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -243,9 +243,10 @@
                     <!-- Sharingbutton LinkedIn -->
                     <a class="resp-sharing-button__link"
                        href="https://www.linkedin.com/shareArticle?mini=true&amp;
-                       url=https%3A%2F%2Fwishing-birthday.herokuapp.com%2F{{ data.slug }}&amp;
-                       title= {{ data.wishurl }}&amp;summary={{ data.wishurl }}&amp;
-                       source=https%3A%2F%2Fwishing-birthday.herokuapp.com%2F{{ data.slug }}"
+                       url= {{ data.wishurl }}&amp;
+                       title= {{ data.fromname }} send to you a wishesh &amp;
+                       summary=Dear {{ data.toname }}, {{ data.fromname }} send to you a Birthday wishesh. Check this Url&amp;
+                       source={{ data.wishurl }}"
                        target="_blank" rel="noopener" aria-label="LinkedIn">
                         <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--medium">
                             <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -260,8 +261,7 @@
                     <!-- Sharingbutton WhatsApp -->
                     <a class="resp-sharing-button__link"
                        href="whatsapp://send?
-                       text={{ data.wishurl }}
-                       https%3A%2F%2Fwishing-birthday.herokuapp.com%2F{{ data.slug }}"
+                       text=Dear {{ data.toname }}, {{ data.fromname }} send to you a Birthday wishesh. Check this Url"
                        target="_blank" rel="noopener" aria-label="WhatsApp">
                         <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--medium">
                             <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -275,8 +275,8 @@
 
                     <!-- Sharingbutton Telegram -->
                     <a class="resp-sharing-button__link"
-                       href="https://telegram.me/share/url?text={{ data.wishurl }}&amp;
-                       url=https%3A%2F%2Fwishing-birthday.herokuapp.com%2F{{ data.slug }}"
+                       href="https://telegram.me/share/url?text=Dear {{ data.toname }}, {{ data.fromname }} send to you a Birthday wishesh. Check this Url&amp;
+                       url={{ data.wishurl }}"
                        target="_blank" rel="noopener" aria-label="Telegram">
                         <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--medium">
                             <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
